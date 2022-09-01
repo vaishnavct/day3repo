@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1"><h4>First div</h4></div>
+    <div id="div2"><h4>Second div</h4></div>
+    <input type="text">
+    <input type="text">
+    <br><br>
+    <textarea cols="30" rows="10"></textarea>
+    <textarea cols="30" rows="10"></textarea>
+    <br><br>
+    <button id="textbox_style">Apply Style To Textboxes</button>
+    <button id="div1_style">Apply style to First Div</button>
+    <button id="say_hello">Say Hello</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //The eventhandler for the button through which the div will get filled
+        $('#textbox_style').click(function(){$('textarea').css({'border':'1px solid red'})})
+        $('#div1_style').click(() => $('#div1').html('What is going on?'))
+        $('#say_hello').click(() => $('input, textarea').val('HELLO'))
+    </script>        
+</body>
+</html>
